@@ -1,17 +1,7 @@
 #"Hello, Michael";
 Write-Host "deploying on" $env:computername; #since we're all not Michael
 
-$myArray = "pinging host 127.0.0.1", 
-"waiting for signal from localhost", 
-"receiving bytes", 
-"transpiling data", 
-"checking bytes for mistransfers",
-"building HTTP packets", 
-"encrypting data using SHA1", 
-"Failed encrypting data using SHA1, Switching to SHA256", 
-"Initializing Google Cloud Service", 
-"mvn appengin:devserver - deploying",
-"Already up to date.";
+[string[]]$myArray = Get-Content -Path ($PSScriptRoot + "\..\lines.txt")
 
 $myColors = "red", "green", "blue", "yellow";
 $myPrefixes = "`t... ", "`t", " `b";
@@ -23,6 +13,6 @@ while ($true) {
     $myPrefix = Get-Random -input $myPrefixes -Count 1;
     $myInterval = Get-Random -input $myIntervals -Count 1;
     $myTimestamp = Get-Date -UFormat "%Y-%m-%d %T"
-    write-host ($myTimestamp + "  " + $myPrefix + $myText) -foreground $myColor;
+    Write-Host ($myTimestamp + "  " + $myPrefix + $myText) -foreground $myColor;
     Start-Sleep -Milliseconds $myInterval;
 }
