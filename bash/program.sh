@@ -36,7 +36,8 @@ do
     LINE=$(Get-Random "${LINES[@]}")
     COLOR=$(Get-Random "${COLORS[@]}")
     PREFIX=$(Get-Random "${PREFIXES[@]}")
-    printf "${COLOR}${PREFIX}${LINE}\n"
+    TIMESTAMP=$(echo $(date '+%Y-%m-%d %H:%M:%S'))
+    printf "${COLOR}${TIMESTAMP} ${PREFIX}${LINE}\n"
     sleep 0.3
 
 done

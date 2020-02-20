@@ -22,6 +22,7 @@ while ($true) {
     $myColor = Get-Random -input $myColors -Count 1;
     $myPrefix = Get-Random -input $myPrefixes -Count 1;
     $myInterval = Get-Random -input $myIntervals -Count 1;
-    write-host ($myPrefix + $myText) -foreground $myColor;
+    $myTimestamp = Get-Date -UFormat "%Y-%m-%d %T"
+    write-host ($myTimestamp + "  " + $myPrefix + $myText) -foreground $myColor;
     Start-Sleep -Milliseconds $myInterval;
 }
