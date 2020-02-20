@@ -1,0 +1,11 @@
+pinging host 127.0.0.1
+waiting for signal from localhost
+receiving bytes
+transpiling data
+checking bytes for mistransfer
+building HTTP packets
+encrypting data using SHA1
+Failed encrypting data using SHA1, Switching to SHA256
+Initializing Google Cloud Service
+mvn appengin:devserver - deploying
+Already up to date.
