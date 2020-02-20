@@ -12,4 +12,3 @@ Ever needed to faff or pretend to be seriously busy at work? This repository hos
 ## How to improve
 
 - Add more jargon to the text
-- Add Date and Time to the Output
